@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  phpnubefact:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: "php-nubefact-api"
+    ports:
+      - "8080:80"
