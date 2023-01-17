@@ -1,26 +1,29 @@
 {
-    "name": "jibaru/nubefact-api",
-    "description": "Nubefact API Integration",
-    "type": "library",
-    "require": {
-        "guzzlehttp/guzzle": "^7.5"
-    },
-    "require-dev": {
-        "squizlabs/php_codesniffer": "3.*"
-    },
-    "scripts": {
-        "csniff": "vendor/bin/phpcs --standard=PSR12 src/"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Jibaru\\NubefactApi\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Jibaru",
-            "email": "ignacioruedaboada@hotmail.com"
-        }
-    ]
+  "name": "jibaru/nubefact-api",
+  "description": "Nubefact API Integration",
+  "type": "library",
+  "require": {
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*",
+    "phpunit/phpunit": "^9.5"
+  },
+  "scripts": {
+    "csniff": "vendor/bin/phpcs --standard=PSR12 src/ tests/",
+    "csbf": "vendor/bin/phpcbf --standard=PSR12 src/ tests/",
+    "test": "vendor/bin/phpunit"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Jibaru\\NubefactApi\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Jibaru",
+      "email": "ignacioruedaboada@hotmail.com"
+    }
+  ]
 }
