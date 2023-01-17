@@ -17,7 +17,8 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Jibaru\\NubefactApi\\": "src/"
+      "Jibaru\\NubefactApi\\": "src/",
+      "Jibaru\\NubefactApi\\Tests\\": "tests/"
     }
   },
   "authors": [
