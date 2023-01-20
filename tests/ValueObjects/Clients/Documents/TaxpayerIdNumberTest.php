@@ -15,7 +15,7 @@ class TaxpayerIdNumberTest extends TestCase
     public function testNewInstance()
     {
         $expectedName = 'Registro Único del Contribuyente';
-        $expectedType = '2';
+        $expectedType = '6';
         $expectedValue = '12345678901';
 
         $document = new TaxpayerIdNumber($expectedValue);
