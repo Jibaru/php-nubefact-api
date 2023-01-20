@@ -4,10 +4,10 @@ namespace Jibaru\NubefactApi\ValueObjects\Operations;
 
 class GenerateVoucher extends Operation
 {
-    public const TYPE = 'generar_comprobante';
+    public const VALUE = 'generar_comprobante';
 
     public function __construct()
     {
-        parent::__construct(GenerateVoucher::TYPE);
+        parent::__construct(GenerateVoucher::VALUE);
     }
 }
