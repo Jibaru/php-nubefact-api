@@ -9,14 +9,14 @@ abstract class Operation implements Arrayable
     /**
      * @var string
      */
-    protected string $type;
+    protected string $value;
 
     /**
-     * @param string $type
+     * @param string $value
      */
-    public function __construct(string $type)
+    public function __construct(string $value)
     {
-        $this->type = $type;
+        $this->value = $value;
     }
 
     /**
@@ -25,7 +25,7 @@ abstract class Operation implements Arrayable
     public function toArray(): array
     {
         return [
-            'type' => $this->type,
+            'value' => $this->value,
         ];
     }
 }

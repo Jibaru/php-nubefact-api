@@ -3,12 +3,13 @@
 namespace Jibaru\NubefactApi\ValueObjects\Numbers;
 
 use Jibaru\NubefactApi\ValueObjects\Contracts\Arrayable;
+use Jibaru\NubefactApi\ValueObjects\Contracts\Validatable;
 use Jibaru\NubefactApi\ValueObjects\Numbers\Exceptions\NotAllowedNumber;
 
-class Number implements Arrayable
+class Number implements Arrayable, Validatable
 {
-    public const MAX_ALLOWED_CHARACTERS = 1;
-    public const MIN_ALLOWED_CHARACTERS = 8;
+    public const MAX_ALLOWED_CHARACTERS = 8;
+    public const MIN_ALLOWED_CHARACTERS = 1;
 
     /**
      * @var int
@@ -23,12 +24,7 @@ class Number implements Arrayable
     {
         $this->number = $number;
 
-        $valueLength = $this->valueLength();
-
-        if (
-            $valueLength > Number::MAX_ALLOWED_CHARACTERS ||
-            $valueLength < Number::MIN_ALLOWED_CHARACTERS
-        ) {
+        if (!$this->isValid()) {
             throw new NotAllowedNumber();
         }
     }
@@ -39,6 +35,19 @@ class Number implements Arrayable
     public function value(): int
     {
         return $this->number;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isValid(): bool
+    {
+        $valueLength = $this->valueLength();
+
+        return (
+            $valueLength > Number::MAX_ALLOWED_CHARACTERS ||
+            $valueLength < Number::MIN_ALLOWED_CHARACTERS
+        );
     }
 
     /**

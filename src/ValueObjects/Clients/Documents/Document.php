@@ -4,8 +4,9 @@ namespace Jibaru\NubefactApi\ValueObjects\Clients\Documents;
 
 use Jibaru\NubefactApi\ValueObjects\Clients\Documents\Exceptions\NotAllowedClientDocument;
 use Jibaru\NubefactApi\ValueObjects\Contracts\Arrayable;
+use Jibaru\NubefactApi\ValueObjects\Contracts\Validatable;
 
-abstract class Document implements Arrayable
+abstract class Document implements Arrayable, Validatable
 {
     public const ALLOWED_TYPE_CHARACTERS = 1;
     public const MAX_VALUE_LENGTH = 15;
@@ -46,7 +47,7 @@ abstract class Document implements Arrayable
     /**
      * @return bool
      */
-    protected function isValid(): bool
+    public function isValid(): bool
     {
         return (
             $this->isValidType() &&

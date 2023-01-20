@@ -3,9 +3,10 @@
 namespace Jibaru\NubefactApi\ValueObjects\Series;
 
 use Jibaru\NubefactApi\ValueObjects\Contracts\Arrayable;
+use Jibaru\NubefactApi\ValueObjects\Contracts\Validatable;
 use Jibaru\NubefactApi\ValueObjects\Series\Exceptions\NotAllowedSeries;
 
-abstract class Series implements Arrayable
+abstract class Series implements Arrayable, Validatable
 {
     public const MAX_ALLOWED_CHARACTERS = 4;
     public const MIN_ALLOWED_CHARACTERS = 4;
@@ -30,14 +31,22 @@ abstract class Series implements Arrayable
         $this->startCharacter = $startCharacter;
         $this->number = $number;
 
-        $length = strlen($this->value());
-
-        if (
-            $length > Series::MAX_ALLOWED_CHARACTERS ||
-            $length < Series::MIN_ALLOWED_CHARACTERS
-        ) {
+        if (!$this->isValid()) {
             throw new NotAllowedSeries();
         }
+    }
+
+    /**
+     * @return bool
+     */
+    public function isValid(): bool
+    {
+        $length = strlen($this->value());
+
+        return (
+            $length > Series::MAX_ALLOWED_CHARACTERS ||
+            $length < Series::MIN_ALLOWED_CHARACTERS
+        );
     }
 
     public function value(): string
