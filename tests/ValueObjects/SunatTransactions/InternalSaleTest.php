@@ -1,6 +1,6 @@
 <?php
 
-namespace ValueObjects;
+namespace Jibaru\NubefactApi\Tests\ValueObjects\SunatTransactions;
 
 use Jibaru\NubefactApi\ValueObjects\SunatTransactions\InternalSale;
 use PHPUnit\Framework\TestCase;
