@@ -12,7 +12,7 @@
   "scripts": {
     "csniff": "vendor/bin/phpcs --standard=PSR12 src/ tests/",
     "csbf": "vendor/bin/phpcbf --standard=PSR12 src/ tests/",
-    "test": "vendor/bin/phpunit"
+    "test": "vendor/bin/phpunit tests"
   },
   "license": "MIT",
   "autoload": {
