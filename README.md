@@ -31,17 +31,17 @@ This repository follow the [PSR12 standards](https://www.php-fig.org/psr/psr-12/
 | fecha_de_vencimiento               | Jibaru\NubefactApi\ValueObjects\Dates\DueDate                      | formattedValue()             | :white_check_mark: |
 | moneda                             | Jibaru\NubefactApi\ValueObjects\Currencies\Currency                | value()                      | :white_check_mark: |
 | tipo_de_cambio                     |                                                                    |                              |                    |
-| porcentaje_de_igv                  |                                                                    |                              |                    |
+| porcentaje_de_igv                  | Jibaru\NubefactApi\ValueObjects\Fees\VoucherIGV                    | percentage()                 | :white_check_mark: |
 | descuento_global                   | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | globalDiscount()->value()    | :white_check_mark: |
 | total_descuento                    | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalDiscount()->value()     | :white_check_mark: |
 | total_anticipo                     | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalAdvance()->value()      | :white_check_mark: |
 | total_gravada                      | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalTaxed()->value()        | :white_check_mark: |
 | total_inafecta                     | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalUnaffected()->value()   | :white_check_mark: |
 | total_exonerada                    | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalExonerated()->value()   | :white_check_mark: |
-| total_igv                          |                                                                    |                              |                    |
+| total_igv                          | Jibaru\NubefactApi\ValueObjects\Fees\VoucherIGV                    | value()                      | :white_check_mark: |
 | total_gratuita                     | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalFree()->value()         | :white_check_mark: |
 | total_otros_cargos                 | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalOtherCharges()->value() | :white_check_mark: |
-| total_isc                          |                                                                    |                              |                    |
+| total_isc                          | Jibaru\NubefactApi\ValueObjects\Fees\VoucherISC                    | value()                      | :white_check_mark: |
 | total                              | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | total()->value()             | :white_check_mark: |
 | percepcion_tipo                    |                                                                    |                              |                    |
 | percepcion_base_imponible          |                                                                    |                              |                    |
@@ -50,7 +50,7 @@ This repository follow the [PSR12 standards](https://www.php-fig.org/psr/psr-12/
 | retencion_tipo                     |                                                                    |                              |                    |
 | retencion_base_imponible           |                                                                    |                              |                    |
 | total_retencion                    |                                                                    |                              |                    |
-| total_impuestos_bolsas             |                                                                    |                              |                    |
+| total_impuestos_bolsas             | Jibaru\NubefactApi\ValueObjects\Fees\VoucherICBPER                 | value()                      | :white_check_mark: |
 | observaciones                      |                                                                    |                              |                    |
 | documento_que_se_modifica_tipo     |                                                                    |                              |                    |
 | documento_que_se_modifica_serie    |                                                                    |                              |                    |
