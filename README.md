@@ -30,7 +30,7 @@ This repository follow the [PSR12 standards](https://www.php-fig.org/psr/psr-12/
 | fecha_de_emision                   | Jibaru\NubefactApi\ValueObjects\Dates\IssueDate                    | formattedValue()             | :white_check_mark: |
 | fecha_de_vencimiento               | Jibaru\NubefactApi\ValueObjects\Dates\DueDate                      | formattedValue()             | :white_check_mark: |
 | moneda                             | Jibaru\NubefactApi\ValueObjects\Currencies\Currency                | value()                      | :white_check_mark: |
-| tipo_de_cambio                     |                                                                    |                              |                    |
+| tipo_de_cambio                     | Jibaru\NubefactApi\ValueObjects\ExchangeRates\ExchangeRate         | value()                      | :white_check_mark: |
 | porcentaje_de_igv                  | Jibaru\NubefactApi\ValueObjects\Fees\VoucherIGV                    | percentage()                 | :white_check_mark: |
 | descuento_global                   | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | globalDiscount()->value()    | :white_check_mark: |
 | total_descuento                    | Jibaru\NubefactApi\ValueObjects\Amounts\InvoiceAmount              | totalDiscount()->value()     | :white_check_mark: |
