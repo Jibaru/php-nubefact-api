@@ -8,3 +8,5 @@ services:
     container_name: "php-nubefact-api"
     ports:
       - "8080:80"
+    volumes:
+      - .:/app

@@ -6,6 +6,3 @@ COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 WORKDIR /app
 
-COPY . .
-
-RUN composer install
